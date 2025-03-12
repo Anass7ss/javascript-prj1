@@ -1,0 +1,38 @@
+amine amine aine 
+amin  main mine
+a b c abc
+legdali legdani dino arduino Adam
+legbani
+108-23
+108-0
+hello108
+name108
+legdani dani
+nasi
+
+abc-1089
+abcd-10896
+
+Modifiers: 
++ (1,N) ?(0,1) * (0,N)
+
+[a-z] 
+Quantifiers:
+{3,}
+\b word boundry : hard abit
+a
+a
+anasass anas ID105
+DD105-GF DD 206 
+DD105
+DD 105
+20-03-2042
+20-03-20
+20/03/2049
+
+[0-9]
+\s \b \d \w
+
+
+
+

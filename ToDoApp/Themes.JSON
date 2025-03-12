@@ -1,0 +1,44 @@
+[
+    {
+        "name":"Nature", 
+        "primary":"#white", 
+        "secondary":"#C3E703",
+        "tertiary": "black"
+    },
+    {
+        "name":"Lolipop", 
+        "primary":"#FEFFFF", 
+        "secondary":"#E31B90",
+        "tertiary": "black"
+    },
+    {
+        "name":"Dark", 
+        "primary":"#262626", 
+        "secondary":"#DC2D42",
+        "tertiary": "white"
+    },
+    {
+        "name":"Alive", 
+        "primary":"white", 
+        "secondary":"#0336FF",
+        "tertiary": "#FF0266"
+    },
+    {
+        "name":"Cyber", 
+        "primary":"#373740", 
+        "secondary":"#1EB980",
+        "tertiary": "white"
+    },
+    {
+        "name":"Orange", 
+        "primary":"#FFFFFF", 
+        "secondary":"#FF902A",
+        "tertiary": "black"
+    },
+    {
+        "name":"Hero", 
+        "primary":"#080808", 
+        "secondary":"#146EF5",
+        "tertiary": "white"
+    }
+]

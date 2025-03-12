@@ -1,0 +1,372 @@
+:root {
+    --primary-color: black;
+    --secondary-color: blue;
+    --tertiary-color: white;
+}
+
+.main-btn{
+    background-color: var(--secondary-color);
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+    font-size: 5vw;
+    color: white;
+    position: absolute;
+    top: 41.5vw;
+    left: 47.25vw;
+    z-index: 3;
+    cursor: pointer;
+}
+.clear-btn{
+    background-color: red;
+    width: 4vw;
+    height: 4vw;
+    border-radius: 50%;
+    font-size: 1vw;
+    color: white;
+    position: absolute;
+    top: 42.5vw;
+    opacity: 0;
+    left: 46vw;
+    z-index: 2;
+    cursor: pointer;
+}
+#container{
+    height: 90vh;
+    background-color: var(--primary-color);
+    border: 2px solid var(--tertiary-color);
+}
+.tasks{
+    max-height: 55vh;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+hr{
+    height: 1px;
+    background-color: var(--tertiary-color);
+    border: none;
+
+}
+#container h5, #container p, #container h2, #container h1{
+    color: var(--tertiary-color);
+}
+@keyframes rotater {
+    0%{
+
+    }
+    100%{
+        background-color: red;
+        transform: rotate(135deg) scale(1.15);
+    }
+}
+
+@keyframes returner {
+    0%{
+        background-color: red;
+        transform: rotate(135deg) scale(1.05);
+    }
+    100%{
+        background-color: var(--secondary-color);
+        transform: rotate(0deg) scale(1);
+    }
+}
+.rotate{
+    animation: rotater 1s ease-in-out 0s 1 normal forwards;
+}
+.return{
+    animation: returner 1s ease-in-out 0s 1 normal forwards;
+}
+@keyframes showe {
+    0%{
+        opacity: 0;
+        transform: translateY(-200px);
+        display: none;
+    }
+    100%{
+        opacity: 1;
+        transform:  translateY(-300px);
+    }
+}
+@keyframes noshow {
+    0%{
+        opacity: 1;
+        transform:  translateY(-300px);
+    }
+    100%{
+        opacity: 0;
+        display: none;
+        transform: translateY(-200px);
+    }
+}
+.unlock{
+    animation: showe 1s ease-in-out 0s 1 normal forwards;
+    z-index: 1;
+}
+.lock{
+    animation: noshow 1s ease-in-out 0s 1 normal forwards;
+    z-index: 1;
+}
+body{
+    height: 750px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    overflow: hidden;
+    background-color: var(--primary-color);
+}
+#tag-container{
+    width: 100%;
+    padding: 1px;
+    border: 2px solid #e7e5e5;
+    border-radius: 6px;
+}
+#tag-input{
+    border: none;
+    outline: none;
+    width: 50%;
+}
+.tag{
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 30px;
+    margin-top: 5px;
+    width: fit-content;
+    padding: 4px 5px ;
+    margin-right:2px;
+}
+.checkbox-round {
+width: 1.7em;
+height: 1.7em;
+background-color: white;
+border-radius: 50%;
+border: 1px solid #bfbdbd;
+appearance: none;
+outline: none;
+cursor: pointer;
+}
+.checkbox-round:checked{
+    background-color: var(--secondary-color);
+    outline: 2px solid black;
+}
+#popup{
+    z-index: 1;
+    position:absolute;
+    right: 591px;
+}
+@keyframes moverLeft {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(-80px);
+        opacity: 1;
+    }
+}
+@keyframes gobackLeft {
+    0%{
+        transform: translateX(-80px);
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.left-animation{
+    animation: moverLeft 1s ease-in-out 0s 1 normal forwards;
+}
+.left-animation-return{
+    animation: gobackLeft 1s ease-in-out 0s 1 normal forwards;
+}
+#widgets-tab{
+    position: absolute;
+    transform: rotate(90deg);
+    right: -33px;
+    top: 238.5px;
+    opacity: 1;
+    z-index: 4;
+    padding: 9px 25.5px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all;
+    transition-duration: 0.3s;
+}
+#themes-tab{
+   
+        position: absolute;
+        transform: rotate(90deg);
+        right: -31px;
+        top: 131px;
+        opacity: 1;
+        z-index: 4;
+        padding: 9.5px 25px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all;
+    transition-duration: 0.3s;
+}
+#board-tab{
+   
+    position: absolute;
+    transform: rotate(90deg);
+    right: -49px;
+    top:362.5px;
+    opacity: 1;
+    z-index: 4;
+    padding: 9px 25px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all;
+    transition-duration: 0.3s;
+}
+ #widgets-tab:hover , #themes-tab:hover , #board-tab:hover{
+    transform: rotate(90deg) scale(1.13);
+    z-index: 5;
+}
+#sidebar{
+    position: absolute;
+    right: -53px;
+    z-index: 4;
+}
+@keyframes showwidget {
+    0%{
+        opacity:0;
+        
+    }
+    100%{
+        right: 0px;
+        opacity:1;
+    }
+}
+
+@keyframes hidewidget {
+    0%{
+        right: 0px;
+        opacity:1;
+    }
+    100%{
+        
+        opacity:0;
+    }
+}
+
+#theme-sidebar{
+    position: absolute;
+    right:-500px;
+    top: 100px;
+    width: 28%;
+    padding: 30px;
+    border-radius: 4px;
+    opacity: 1;
+    height: 550px;
+}
+
+#theme-sidebar td:hover{
+    cursor: pointer;
+}
+
+#mode-switch{
+    background-color: rgb(66, 66, 66);
+    width: 150px;
+    height: 50px;
+    margin: 10px 0;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+@keyframes showBar {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        right:0px;
+        opacity:1;
+    }
+}
+@keyframes hideBar {
+    0%{
+        right:0px;
+        opacity:1;
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        right:-500px;
+    }
+}
+
+@keyframes follow {
+    0%{
+        right:0px;
+        opacity:1;
+    }
+    100%{
+        opacity: 1;
+        right:427px;
+    }
+}
+@keyframes unfollow {
+    0%{
+        opacity: 1;
+        right:427px;
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        right:-53px;
+        opacity:0;
+    }
+}
+
+
+
+.arrow {
+    border: solid black;
+    border-width: 0 10px 10px 0;
+    display: inline-block;
+    padding: 3px;
+    opacity:0.2;
+    z-index: 0;
+    position: absolute;
+    right: 25px;
+    top:250px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+  }
+
+  @keyframes hintTab {
+    0%{
+        opacity:0;
+    }
+    40%{
+        opacity:0.05;
+    }
+    100%{
+        right:100px;
+        opacity:0.2;
+    }
+  }
+
+  .tasks-list p{
+    user-select: none;
+  }
+  .tasks-list p:hover{
+    cursor: pointer;
+  }
+
+
+  .draggable{
+    cursor:move;
+}
+
+
+.dragging{
+    opacity: .5;
+}
